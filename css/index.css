@@ -1,0 +1,1094 @@
+/** NORMALIZE
+    ========================================================================== */
+    
+
+
+button,
+textarea {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+
+.trigger {
+    display: none;
+}
+
+
+
+
+/** SCREEN
+   ========================================================================== */
+
+
+@media only screen {
+
+    :root {
+        --border-color: rgba(200, 200, 200, 0.5);
+        --heading-background: rgba(6, 6, 6, 0.8);
+        --heading-secondary-background: rgba(6, 6, 6, 0.7);
+        --heading-ternary-background: rgba(6, 6, 6, 0.6);
+        --scrollbar-thumb: rgba(0, 0, 0, 0.5);
+        --scrollbar-track: rgba(0, 0, 0, 0.3);
+        --timing-duration: 250ms;
+        --timing-function: cubic-bezier(1,0,0,1);
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    a,
+    button,
+    label[for] {
+        color: inherit;
+        cursor: pointer;
+        transition: color var(--timing-duration);
+    }
+
+
+    /** Cuerpo
+     * 1. `background`: Muro de cristal.
+     * 2. La página ocupa como mínimo toda la altura de la pantalla.
+     * TODO: La presentación en móvil no se ajusta del todo a la presentación deseada. Se debe investigar.
+     *
+     * @credits
+     * https://www.cssmatic.com/es/gradient-generator#'\-moz\-linear\-gradient\%28\-45deg\%2C\%20rgba\%28118\%2C169\%2C91\%2C1\%29\%200\%25\%2C\%20rgba\%2837\%2C92\%2C10\%2C1\%29\%2043\%25\%2C\%20rgba\%2817\%2C46\%2C0\%2C1\%29\%20100\%25\%29\%3B'
+     */
+    
+    body {
+        /* 1 */
+        background: rgba(118,169,91,1);
+        background: -moz-linear-gradient(-45deg, rgba(118,169,91,1) 0%, rgba(37,92,10,1) 43%, rgba(17,46,0,1) 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(118,169,91,1)), color-stop(43%, rgba(37,92,10,1)), color-stop(100%, rgba(17,46,0,1)));
+        background: -webkit-linear-gradient(-45deg, rgba(118,169,91,1) 0%, rgba(37,92,10,1) 43%, rgba(17,46,0,1) 100%);
+        background: -o-linear-gradient(-45deg, rgba(118,169,91,1) 0%, rgba(37,92,10,1) 43%, rgba(17,46,0,1) 100%);
+        background: -ms-linear-gradient(-45deg, rgba(118,169,91,1) 0%, rgba(37,92,10,1) 43%, rgba(17,46,0,1) 100%);
+        background: linear-gradient(135deg, rgba(118,169,91,1) 0%, rgba(37,92,10,1) 43%, rgba(17,46,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76a95b', endColorstr='#112e00', GradientType=1 );
+        
+        color: #ddd;
+        display: flex; /* 2 */
+        flex-direction: column;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        height: 100vh; /* 2 */
+        margin: 0;
+        overflow: hidden; /* 2 */
+        text-rendering: optimizeLegibility;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+
+    /** Elementos de interacción con el usuario.
+     */
+
+    .footer__link:hover,
+    .nav__action:hover,
+    .toggle__actuator:hover {
+        color: #fff;
+    }
+
+    
+    /** Títulos.
+     */
+
+    [class*="__title"] {
+        margin: 0;
+    }
+
+
+
+    /** SCREEN > Conmutador
+     *
+     * @markup
+        <[div|li|nav] class="toggle">
+            <input class="toggle__trigger trigger" id="[id]" type="checkbox" />
+            <label class="toggle__actuator" for="[toggle__trigger.id]">[text]</label>
+            <[div|ol|ul] class="toggle__target">[text]</[div|ol|ul]>
+        </[div|li|nav]>
+        ========================================================================== */
+
+
+    .toggle__actuator {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
+    /** SCREEN > Estructura
+     *
+     * @markup
+        <body>
+            <header class="header">[header]</header>
+            <main class="main">[main]</main>
+            <footer class="footer">[footer]</footer>
+        </body>
+        ========================================================================== */
+
+
+    .footer,
+    .header {
+        align-items: center;
+        background-color: var(--heading-background);
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.5rem;
+    }
+
+
+
+
+    /** SCREEN > Cabecera
+     *
+     * @markup
+        <header class="header">
+            <h1 class="header__title">[text]</h1>
+            <nav class="header__nav">[nav]</nav>
+        </header>
+        ========================================================================== */
+    
+
+    .header {
+        box-shadow: 0 0 0.25rem var(--heading-background);
+        padding: 1rem;
+    }
+
+
+
+
+    /** SCREEN > Menú
+     *
+     * @markup
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <button class="nav__action" data-action="[action]">[text]</button>
+                </li>
+            </ul>
+        </nav>
+        ========================================================================== */
+
+  
+    .nav__action{
+        padding-left: 0;
+        text-align: left;
+        width: 100%;
+    }
+
+
+    /* Decoración: círculo.
+     */
+
+    .nav__action::before  {
+        border: 0.25rem solid;
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        transform: translateX(-1.3rem);
+        transition: 250ms all;
+        vertical-align: middle;
+    }
+
+    .nav__action:hover::before {
+        transform: translateX(-1.3rem) scale(1.2);
+    }
+    
+    .nav__item {
+        background-color: var( --heading-background);
+        border: 0 solid var(--border-color);
+        border-left-width: 0.1rem;
+        box-shadow: -2rem 0 0 var( --heading-background);
+        max-width: 10rem;
+        padding: 0 1rem;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .nav__item:last-child {
+        flex-grow: 1;
+    }
+
+
+    /* Listado del menú
+     * 1. Menú a la derecha.
+     * 2. Altura de `.footer`.
+     * 3. Altura de `.header`.
+     * 4. Se situa por encima de `.main`.
+     */
+
+    .nav__list {
+        align-items: flex-end; /* 1 */
+        background-color: var(--heading-background);
+        bottom: 2.5rem; /* 2 */
+        display: flex;
+        flex-direction: column;        
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        top: 3.5rem; /* 3 */
+        transition: 250ms left;
+        z-index: 2; /* 4 */
+    }
+
+
+
+
+    /** SCREEN > Menú > Conmutador
+     *
+     * @markup
+        <nav class="nav toggle">
+            <input class="toggle__trigger trigger" id="menu" type="checkbox" />
+            <label class="toggle__actuator" for="menu" title="[text]">[text]</label>
+            <ul class="nav__list toggle__target">[text]</ul>
+        </nav>
+        ========================================================================== */
+    
+    
+    /** Hamburguesa
+     * Oculta el texto `Menú`.
+     * @credits
+     * https://css-tricks.com/three-line-menu-navicon/
+     */
+
+    .nav .toggle__actuator {
+        overflow: hidden;
+        text-indent: -2.25rem;
+        transition: text-indent var(--timing-duration) var(--timing-function), width var(--timing-duration) var(--timing-function);
+        width: 1.5rem;
+    }
+
+    .nav .toggle__actuator::after {
+        background-color: currentColor;
+        box-shadow: 0 0.6rem 0 0 currentColor, 0 1.2rem 0 0 currentColor;
+        content: '';
+        height: 0.25rem;
+        width: 1.5rem;
+    }
+
+
+    /* Presentación del texto `Menú`.
+    */
+
+    .nav .toggle__actuator:hover {
+        text-indent: 0;
+        width: 3.8rem;
+    }
+
+
+    /** Menú
+     */
+
+    .toggle__trigger:checked ~ .nav__list {
+        left: 100%;
+    }
+
+
+
+
+    /** SCREEN > Estructura > Contenido
+     *
+     * @markup
+        <main class="main">
+            <article class="season">[season]</article>
+        </main>
+        ========================================================================== */
+
+
+    /**
+     * 1. Ocupa el espacio entre `.header` y `.footer`.
+     */
+
+    .main {
+        flex-grow: 1; /* 1 */
+        font-weight: 300;
+        line-height: 1.25;
+    }
+
+
+    /* Decoración: Elementos del fondo.
+     */
+
+    .main::after,
+    .main::before,
+    .season::before {
+        bottom: 10%;
+        content: '';
+        opacity: 0.75;
+        position: absolute;
+        right: 50%;
+        z-index: -1;
+    }
+
+
+    /* Decoración: Grietas en la presa.
+     */
+
+    .main::after {
+        background: center no-repeat url('../img/broken-cracked-glass.png');
+        background-size: contain;
+        padding: 25vh;
+        transform: translateX(50%);
+    }
+
+
+    /* Decoración: Dedo apoyado.
+     * 1. background:  
+     *
+     * @credits
+     * https://www.cssmatic.com/es/gradient-generator#'\-moz\-radial\-gradient\%28center\%2C\%20ellipse\%20cover\%2C\%20rgba\%280\%2C17\%2C0\%2C1\%29\%2028\%25\%2C\%20rgba\%2817\%2C46\%2C0\%2C1\%29\%2033\%25\%2C\%20rgba\%2817\%2C46\%2C0\%2C0\%29\%2039\%25\%29\%3B'
+     */
+
+    .main::before {
+        /* 1 */
+        background: rgba(0,17,0,1);
+        background: -moz-radial-gradient(center, ellipse cover, rgba(0,17,0,1) 28%, rgba(17,46,0,1) 33%, rgba(17,46,0,0) 39%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(28%, rgba(0,17,0,1)), color-stop(33%, rgba(17,46,0,1)), color-stop(39%, rgba(17,46,0,0)));
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(0,17,0,1) 28%, rgba(17,46,0,1) 33%, rgba(17,46,0,0) 39%);
+        background: -o-radial-gradient(center, ellipse cover, rgba(0,17,0,1) 28%, rgba(17,46,0,1) 33%, rgba(17,46,0,0) 39%);
+        background: -ms-radial-gradient(center, ellipse cover, rgba(0,17,0,1) 28%, rgba(17,46,0,1) 33%, rgba(17,46,0,0) 39%);
+        background: radial-gradient(ellipse at center, rgba(0,17,0,1) 28%, rgba(17,46,0,1) 33%, rgba(17,46,0,0) 39%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001100', endColorstr='#112e00', GradientType=1 );
+
+        padding: 20vh 25vh;
+        transform: translate(58%, -2%);
+    }
+
+    .main [class*="__title"] {
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        word-break: break-word;
+    }
+
+
+
+    /** SCREEN > Barra de desplazamiento
+     *
+     *  @see SCREEN > Ronda   
+     *
+     * @markup
+        <main class="main">
+            <article>
+                <ol>
+                    <li class="qualifying-round_[modifier]">
+                        <[tag] class="qualifying-round__[element]">[content]</[tag]>
+                    </li>
+                </ol>
+            </article>
+        </main>
+        ========================================================================== */
+
+
+    /* Firefox
+     *
+     * @credits
+     * https://css-tricks.com/almanac/properties/s/scrollbar/
+     * https://css-tricks.com/the-current-state-of-styling-scrollbars/
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color
+     */
+
+     .main,
+     .qualifying-round__group-list,
+     .qualifying-round__race,
+     .qualifying-round__race-list {
+         scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+         scrollbar-width: thin;
+     }
+     
+     
+     /* Chrome.
+      * 1. Es importante minimizar la anchura, porque en tamaños pequeños realiza un empuje con efectos indeseados.
+      */
+ 
+     
+     .main::-webkit-scrollbar,
+     .qualifying-round__group-list::-webkit-scrollbar,
+     .qualifying-round__race-list::-webkit-scrollbar {
+         border-radius: 0.5rem;
+         width: 0.5rem; /* 1 */
+     }
+ 
+     .main::-webkit-scrollbar-thumb,
+     .qualifying-round__group-list::-webkit-scrollbar-thumb,
+     .qualifying-round__race-list::-webkit-scrollbar-thumb {
+         background-color: var(--scrollbar-thumb);
+     }
+ 
+     .main::-webkit-scrollbar-track,
+     .qualifying-round__group-list::-webkit-scrollbar-track,
+     .qualifying-round__race-list::-webkit-scrollbar-track {
+         -webkit-box-shadow: inset 0 0 6px var(--scrollbar-track);
+     }
+
+
+
+
+    /** SCREEN > Estructura > Contenido > Conmutador
+     *
+     * @markup
+        <main class="main">
+            <[div|li] class="toggle">
+                <input class="toggle__trigger trigger" id="[id]" type="checkbox" />
+                <label class="toggle__actuator" for="[toggle__trigger.id]">[text]</label>
+                <[div|ol|ul] class="toggle__target">[text]</[div|ol|ul]>
+            </[div|li]>
+        </main>
+        ========================================================================== */
+
+
+    /*
+     * 1. Ajuste de `padding-right` para situar `+`.
+     * 2. Ancla para posicionar `+`.
+     */
+
+    .main .toggle__actuator {
+        align-items: center;
+        padding: 0.2rem 0 0 0.5rem; /* 1 */
+        position: relative; /* 2 */
+    }
+   
+    .main .toggle__actuator::after {
+        border-radius: 50%;
+        content: '+';
+        float: right;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        transform: rotate(45deg);
+        transition: transform var(--timing-duration);
+        width: 1.5rem;
+    }
+
+    .main .toggle__trigger:checked ~ .toggle__actuator {
+        margin-bottom: 0;
+        transition: margin-bottom 0s var(--timing-duration);
+    }
+
+    .main .toggle__trigger:checked ~ .toggle__actuator::after {
+        transform: rotate(0);
+    }
+
+    .main .toggle__target {
+        max-height: 5000rem;
+        overflow: hidden;
+        transition: max-height var(--timing-duration) var(--timing-function);
+    }
+
+    .main .toggle__trigger:checked ~ .toggle__target {
+        max-height: 0;
+    }
+
+
+
+
+    /** SCREEN > Temporada
+     *
+     * @markup
+        <article class="season">
+            <h2 class="season__title">
+                [text]
+                <span class="season__number">[number]</span>
+                <time class="season__month" datetime="[year]-[month]">[text]</time>
+            </h2>
+            <div class="season__competition">[competition]</div>
+        </article>
+       ========================================================================== */
+
+
+    /** Decoración: Experimento para temporadas.
+     */
+
+    .season:target::before {
+        background: bottom center no-repeat url('../img/waterfall.gif');
+        background-size: contain;
+        bottom: 0;
+        mix-blend-mode: multiply;
+        padding: 16vh 25vh;
+        transform: translateX(58%);
+        z-index: 0;
+    }
+    
+    .season__competition {
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .season__month {
+        font-size: 1rem;
+    }
+
+
+    /* Título
+     * 1. Compensación de centrado vertical por mayúsculas con `padding-bottom`.
+     */
+
+    .season__title {
+        align-items: center;
+        background-color: var(--heading-background);       
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0.5rem; /* 1 */
+    }
+
+
+
+
+    /** SCREEN > Competición > Conmutador
+     *
+     * @markup
+        <div class="competition">
+            <div class="competition__podium">
+                <input class="toggle__trigger trigger" id="podium" type="checkbox">
+                <ol class="podium__shopper-list toggle__target">[shopper]</ol>
+            </div>
+            <ol class="competition__qualifying-round-list">
+                <li class="qualifying-round_final toggle">
+                    <input class="toggle__trigger" id="qualifying-round_final" type="checkbox" />
+                    <div class="qualifying-round__race toggle__target">[race]</div>
+                </li>
+            </ol>
+        </div>
+        ========================================================================== */
+
+
+    .toggle__trigger:checked ~ .podium__shopper-list,
+    .toggle__trigger:checked ~ .qualifying-round__race {
+        border-width: 0;
+        transition: border-width 0s var(--timing-duration), max-height var(--timing-duration) var(--timing-function);
+    }
+
+    .group > .toggle__actuator,
+    .podium .toggle__actuator,
+    .qualifying-round > .toggle__actuator {
+        background-color: var(--heading-secondary-background);
+        margin-bottom: 0.5rem;
+    }
+
+
+
+    /** SCREEN > Podium
+     *
+     * @markup
+        <div class="podium">
+            <h3 class="podium__title">[text]</h3>
+            <ol class="podium__shopper-list">[shopper]</ol>
+        </div>
+        ========================================================================== */
+
+
+    .podium__shopper-list {
+        border: 1px solid var(--heading-background);
+        border-radius: 0.25rem;
+    }
+
+
+
+
+    /** SCREEN > Ronda
+     *
+     *  ┌─────┬───────────────────┬────────────┬─────────┐
+     *  │ TAG │      MODIFIER     │   ELEMENT  │ CONTENT │ 
+     *  ├─────┼───────────────────┼────────────┼─────────┤
+     *  │ div │ final             │ race       │ shopper │
+     *  ├─────┼───────────────────┼────────────┼─────────┤
+     *  │ ul  │ preliminary-round │ group-list │ group   │
+     *  │     ├───────────────────┼────────────┼─────────┤
+     *  │     │ semi-final        │ race-list  │ shopper │
+     *  └─────┴───────────────────┴────────────┴─────────┘     
+     *
+     * @markup
+        <li class="qualifying-round qualifying-round_[modifier]">
+            <h2 class="qualifying-round__title">[text]</h2>
+            <[tag] class="qualifying-round__[element]">[content]</[tag]>
+        </li>
+        ========================================================================== */
+
+
+    .qualifying-round {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .qualifying-round__group-list {
+        height: 100%;
+    }
+
+
+
+
+    /** SCREEN > Eliminatoria
+     *
+     * @markup
+        <li class="group">
+            <label>
+                <h4 class="group__title">[text]</h4>
+            </label>
+            <ul class="group__race-list">[race]</ul>
+        </li>
+        ========================================================================== */
+
+
+    .group {
+        border: 1px solid var(--heading-background);
+        border-radius: 0.25rem;
+    }
+
+    .group:nth-child(n+2) {
+        margin-top: 0.5rem;
+    }
+
+    .group__race-list {
+        padding: 0 0.25rem 0.5rem;
+    }
+
+    .qualifying-round_preliminary-round {
+        counter-reset: qualifying-race;
+    }
+
+
+
+
+    /** SCREEN > Eliminatoria > Conmutador
+     *
+     * @markup
+        <li class="group toggle">
+            <input class="toggle__trigger" id="[id]" type="checkbox" />
+            <label class="toggle__actuator" for="[toggle__trigger.id]">
+                <h4 class="group__title">[text]</h4>
+            </label>
+            <ul class="group__race-list">[race]</ul>
+        </li>
+        ========================================================================== */
+
+
+    .toggle__trigger:checked ~ .group__race-list {
+        padding-bottom: 0;
+        transition: max-height var(--timing-duration) var(--timing-function), padding-bottom 0s var(--timing-duration);
+    }
+
+    .toggle__trigger:checked ~ .toggle__actuator > .group__title {
+        margin-bottom: 0;
+        transition: margin-bottom 0s var(--timing-duration);
+    }
+
+
+
+
+    /** SCREEN > Carrera
+     *
+     * @markup
+        <[li|div] class="race[ race_finished] race_number_[number]">
+            <label class="toggle__actuator" for="[toggle__trigger.id]">
+                <[h4|h5] class="race__title">[text]</[h4|h5]>
+            </label>
+            <time class="race__date" datetime="[datetime]">[text]</time>
+            <ol class="race__shopper-list">[shopper]</ol>
+        </[li|div]>
+        ========================================================================== */
+
+
+    /*
+     * 1. Necesario para que el `border-radius` se respecte adecuadamente.
+     */
+
+    .race {        
+        border: 1px solid var(--heading-background);
+        border-radius: 0.5rem;
+        overflow: hidden; /* 1 */
+    }
+
+    .race_finished {
+        counter-reset: position;
+    }
+
+    .podium .shopper::before,
+    .race_finished .shopper:not(.no-data)::before {
+        content: counter(position);
+    }
+
+    .race:nth-of-type(n+2) {
+        margin-top: 0.5rem;
+    }
+
+    .race__action {
+        background: rgba(200,6,6,0.6);
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem 0.1em;
+        text-transform: uppercase;
+    }
+
+    .race__date {
+        background-color: rgba(6, 66, 6, 0.6);
+        display: block;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.75rem;
+        font-weight: bold;
+        padding: 0.25rem 0.5rem;
+        text-align: right;
+    }
+
+    .race__title {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .race .toggle__actuator {
+        background-color: var(--heading-ternary-background);
+    }
+
+    .qualifying-round_preliminary-round .race__title::after {
+        content: ' (' counter(qualifying-race) ')';
+        counter-increment: qualifying-race;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.75rem;
+        vertical-align: middle;
+    }
+
+
+
+
+    /** SCREEN > Shopper
+     *
+     * @markup
+        <li class="shopper[ no-data]">[text]</li>
+        ========================================================================== */
+
+    
+    .qualifying-round .shopper::before {
+        content: '?';
+    }
+
+    .shopper {
+        align-items: center;
+        background-color: rgba(6, 6, 6, 0.75);
+        counter-increment: position;    
+        display: flex;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .shopper::before {
+        border: 1px solid;
+        margin-right: 0.5rem;
+        min-width: 1rem;
+        text-align: center;
+    }
+
+    .shopper:nth-child(n+2) {
+        border-top: 1px solid rgba(250, 250, 250, 0.25);
+    }
+
+
+
+
+    /** SCREEN > Popup
+     *
+     * @markup
+        <div class="popup" id="popup">
+            <a href="#" class="popup__velo">[text]</a>
+            <div class="popup__container">
+                <a href="#" class="popup__close">[text]</a>
+                <form class="popup__content">[text]</form>
+            </div>
+        </div>
+        ========================================================================== */
+
+    
+    /*.popup {
+        align-items: center;
+        bottom: 0;
+        display: none;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 3;
+    }
+
+    .popup:target {
+        display: flex;
+    }
+
+    .popup__btn {
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 0.25rem;
+        color: #ddd;
+        margin: 1rem 1rem 0;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .popup__close {
+        color: #ddd;
+        font-size: 1.5rem;
+        position: absolute;
+        right: -1rem;
+        top: -2rem;
+    }
+
+    .popup__container {
+        background-color: rgba(250, 250, 250, 0.95);
+        border-radius: 0.25rem;
+        height: calc(100% - 8rem);
+        padding: 1rem;
+        position: absolute;
+        width: calc(100% - 8rem);
+    }
+
+    .popup__content_theme_transport {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .popup__txt_theme_transport {
+        box-sizing: border-box;
+        flex-grow: 1;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .popup__velo {
+        background-color: rgba(0, 0, 0, 0.75);
+        height: 100%;
+        width: 100%;
+    }*/
+
+
+
+
+    /** SCREEN > Estructura > Pie
+     *
+     * @markup
+        <footer class="footer">
+            <a class="footer__link" href="[url]" target="[text]">[text]</a>
+        </footer>
+        ========================================================================== */
+    
+
+    /**
+     * 1. Queda por encima de la decoración de la temporada (`.season::before`).
+     */
+
+    .footer {
+        box-shadow: 0 0 0.25rem var(--heading-background);
+        padding: 0.5rem 1rem;
+        z-index: 0; /* 1 */
+    }
+
+}
+
+
+
+
+/** LANDSCAPE
+   ========================================================================== */
+
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+
+    /** LANDSCAPE > Estructura > Contenido
+       ========================================================================== */
+    
+
+    .main {
+        overflow: hidden;
+        padding: 0.5rem;
+    }
+    
+
+
+
+    /** LANDSCAPE > Temporada
+     *
+     * @markup
+        <article class="season">
+            <h2 class="season__title">
+                <span class="season__name">
+                    [text]
+                    <span class="season__number">[number]</span>
+                </span>
+                <time class="season__month" datetime="[datetime]">[text]</time>
+            </h2>
+            <ol class="competition__qualifying-round-list">[qualifying-round]</ol>
+        </article>
+       ========================================================================== */
+
+       
+    .season {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+
+
+
+    /** LANDSCAPE > Competición
+     *
+     * @markup
+        <div class="competition">
+            <div class="competition__podium">[podium]</div>
+            <ol class="competition__qualifying-round-list">[qualifying-round]</ol>
+        </div>
+       ========================================================================== */
+
+
+    .competition,
+    .competition__qualifying-round-list {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .competition__podium {
+        width: 25%;
+    }
+
+    .competition__qualifying-round-list {
+        width: 75%;
+    }
+
+    .podium,
+    .qualifying-round {
+        box-sizing: border-box;
+        padding: 0 0.25rem;
+    }
+
+    .podium__shopper-list,
+    .qualifying-round__race {
+        margin: 0 0.25rem;
+    }
+
+    .qualifying-round__group-list,
+    .qualifying-round__race-list {
+        padding: 0 0.25rem;
+    }
+    
+   .qualifying-round__group-list.toggle__target,
+   .qualifying-round__race-list.toggle__target {
+       overflow: hidden auto;
+   }
+
+
+
+
+    /** LANDSCAPE > Estructura > Contenido > Temporada > Competición > Ronda
+       ========================================================================== */
+
+
+    .qualifying-round {
+        width: 33.334%;
+    }
+
+}
+
+
+
+
+/** PORTRAIT
+   ========================================================================== */
+
+
+@media only screen and (orientation: portrait), screen and (max-width: 767px) {
+
+    /** PORTRAIT > Estructura > Contenido
+       ========================================================================== */
+    
+
+    .main {
+        overflow: hidden auto;
+        padding: 1rem;
+    }
+
+
+
+
+    /** PORTRAIT > Estructura > Contenido > Temporada
+       ========================================================================== */
+    
+
+    .podium__shopper-list,
+    .qualifying-round__race {
+        margin: 0 1rem;
+    }
+
+    .qualifying-round__group-list, 
+    .qualifying-round__race-list {
+        padding: 0 1rem;
+    }
+
+
+
+
+    /** PORTRAIT > Estructura > Contenido > Temporada > Competición > Ronda
+       ========================================================================== */
+
+    .qualifying-round {
+        padding-top: 0.5rem;
+    }
+
+
+
+
+    /** PORTRAIT > Estructura > Contenido > Temporada > Competición > Ronda > Eliminatoria
+       ========================================================================== */
+
+
+    .group__race-list {
+        padding: 0 1rem 0.5rem;
+    }
+
+}
+
+
+
+
+/** PRINT
+   ========================================================================== */
+
+
+@media print {
+
+    a {
+        text-decoration: none;
+    }
+
+    a::after {
+        content: ' (' attr(href) ') ';
+        color: #000;
+        display: inline-block;
+        font-size: 0.75rem;
+        white-space: pre-wrap;
+    }
+
+    button,
+    nav,
+    .popup {
+        display: none;
+    }
+
+}
