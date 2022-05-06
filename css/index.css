@@ -519,7 +519,7 @@ ul {
     /** Decoración: Experimento para temporadas.
      */
 
-    .season:target::before {
+    .storic-arc--wallglass-crash::before {
         background: bottom center no-repeat url('../img/waterfall.gif');
         background-size: contain;
         bottom: 0;
