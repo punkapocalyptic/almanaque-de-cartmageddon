@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="CARONTE">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="theme-color" content="#060606" />
+    <title>Temporada 37 de Cartmageddon &bull; Punkapocalyptic &#8211; The Patreon &bull; Bad Roll Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Cartmageddon</h1>
+        <nav class="header__nav nav toggle">
+            <input checked class="toggle__trigger trigger" id="menu" type="checkbox" />
+            <label class="toggle__actuator" for="menu">Menú</label>
+            <ul class="nav__list toggle__target" id="menu">
+                <li class="nav__item">
+                    <a class="nav__action" href="index.html">Temporadas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <article class="season">
+            <h2 class="season__title">
+                <span class="season__name">
+                    Temporada
+                    <span class="season__number">37</span>
+                </span>
+                <time class="season__month" datetime="2023-05">mayo de 2023</time>
+            </h2>
+            <div class="season__competition competition">
+                <div class="competition__podium podium toggle">
+                    <input class="toggle__trigger trigger" id="podium" type="checkbox" />
+                    <label class="toggle__actuator" for="podium">
+                        <h3 class="podium__title">Ganadores</h3>
+                    </label>
+                    <ol class="podium__shopper-list toggle__target">
+                        <li class="shopper">Scottex Johansson</li>
+                        <li class="shopper">El Bueno de Raemon</li>
+                    </ol>
+                </div>
+                <ol class="competition__qualifying-round-list">
+                    <li class="qualifying-round qualifying-round_final toggle">
+                        <input class="toggle__trigger trigger" id="qualifying-round_final" type="checkbox" />
+                        <label class="toggle__actuator" for="qualifying-round_final">
+                            <h3 class="qualifying-round__title">Final</h3>
+                        </label>
+                        <div class="qualifying-round__race race race_finished toggle toggle__target">
+                            <input class="toggle__trigger trigger" id="qualifying-round-final-race" type="checkbox" />
+                            <label class="toggle__actuator" for="qualifying-round-final-race">
+                                <h4 class="race__title">Carrera</h4>
+                            </label>
+                            <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                            <ol class="race__shopper-list toggle__target">
+                                <li class="shopper">Scottex Johansson</li>
+                                <li class="shopper">El Bueno de Raemon</li>
+                                <li class="shopper">Sidorovich "El Come Pollos"</li>
+                                <li class="shopper">Las Rastas de tu Hermana</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li class="qualifying-round qualifying-round_semi-final toggle">
+                        <input class="toggle__trigger trigger" id="qualifying-round-semi-final" type="checkbox" />
+                        <label class="toggle__actuator" for="qualifying-round-semi-final">
+                            <h3 class="qualifying-round__title">Semifinal</h3>
+                        </label>
+                        <ul class="qualifying-round__race-list toggle__target">
+                            <li class="race race_finished race_number_1 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-2-race-1" type="checkbox" />
+                                <label class="toggle__actuator" for="qualifying-round-2-race-1">
+                                    <h4 class="race__title">Carrera 1</h4>
+                                </label>
+                                <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                <ol class="race__shopper-list toggle__target">
+                                    <li class="shopper">Las Rastas de tu Hermana</li>
+                                    <li class="shopper">Matthew "Cola Rápida"</li>
+                                    <li class="shopper">Lily "Abuelita" Bowen</li>
+                                    <li class="shopper">Jhon "Otis" Sanchez</li>
+                                    <li class="shopper">Maruja karen</li>
+                                    <li class="shopper">Henrietta Bayonetta</li>
+                                    <li class="shopper">La Vaga Garrapata</li>
+                                    <li class="shopper">Peter Bilt 281</li>
+                                </ol>
+                            </li>
+                            <li class="race race_finished race_number_2 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-2-race-2" type="checkbox" />
+                                <label class="toggle__actuator" for="qualifying-round-2-race-2">
+                                    <h4 class="race__title">Carrera 2</h4>
+                                </label>
+                                <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                <ol class="race__shopper-list toggle__target">
+                                    <li class="shopper">Scottex Johansson</li>
+                                    <li class="shopper">Mudlover (mi vecino del primero derecha)</li>
+                                    <li class="shopper">Frank "frenar-es-de-cobardes" Churchill</li>
+                                    <li class="shopper">Dani Tordo</li>
+                                    <li class="shopper">Ron Miscabajo</li>
+                                    <li class="shopper">Lokomami</li>
+                                    <li class="shopper">La Rápida del Oeste</li>
+                                    <li class="shopper">Calambres</li>
+                                </ol>
+                            </li>
+                            <li class="race race_finished race_number_3 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-2-race-3" type="checkbox" />
+                                <label class="toggle__actuator" for="qualifying-round-2-race-3">
+                                    <h4 class="race__title">Carrera 3</h4>
+                                </label>
+                                <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                <ol class="race__shopper-list toggle__target">
+                                    <li class="shopper">El Bueno de Raemon</li>
+                                    <li class="shopper">Darudesanstorm</li>
+                                    <li class="shopper">Zaskia</li>
+                                    <li class="shopper">Wez cara de Hez</li>
+                                    <li class="shopper">Athal Troll</li>
+                                    <li class="shopper">Sam Shun Fa</li>
+                                    <li class="shopper">Tortugo Patamala</li>
+                                    <li class="shopper">Ro "la Botas"</li>
+                                </ol>
+                            </li>
+                            <li class="race race_finished race_number_4 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-2-race-4" type="checkbox" />
+                                <label class="toggle__actuator" for="qualifying-round-2-race-4">
+                                    <h4 class="race__title">Carrera 4</h4>
+                                </label>
+                                <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                <ol class="race__shopper-list toggle__target">
+                                    <li class="shopper">Sidorovich "El Come Pollos"</li>
+                                    <li class="shopper">Asturix</li>
+                                    <li class="shopper">Apestoso "Pit"</li>
+                                    <li class="shopper">Pisahuevos</li>
+                                    <li class="shopper">Lo "Mascabalas" Real</li>
+                                    <li class="shopper">Crudo</li>
+                                    <li class="shopper">Brook</li>
+                                    <li class="shopper">Vladman el Murciégalo</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="qualifying-round qualifying-round_preliminary-round toggle">
+                        <input class="toggle__trigger trigger" id="qualifying-round-preliminary-round" type="checkbox">
+                        <label class="toggle__actuator" for="qualifying-round-preliminary-round">
+                            <h3 class="qualifying-round__title">Eliminatoria</h3>
+                        </label>
+                        <ul class="qualifying-round__group-list toggle__target">
+                            <li class="group group_number_1 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-preliminary-round-group-1" type="checkbox">
+                                <label class="toggle__actuator" for="qualifying-round-preliminary-round-group-1">
+                                    <h4 class="group__title">Clasificatoria 1</h4>
+                                </label>
+                                <ul class="group__race-list toggle__target">
+                                <li class="race race_finished race_number_1 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-1" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-1">
+                                        <h5 class="race__title">Carrera 1</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="244">Las Rastas de tu Hermana</li>
+                                        <li class="shopper" data-id="45">Tiffany Button</li>
+                                        <li class="shopper" data-id="165">Johnny Crash</li>
+                                        <li class="shopper" data-id="2">Cornelius Junior</li>
+                                        <li class="shopper" data-id="250">Reservoir Kitties</li>
+                                        <li class="shopper" data-id="282">Bourbon "El Tunelador"</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_2 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-2" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-2">
+                                        <h5 class="race__title">Carrera 2</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="67">Henrietta Bayonetta</li>
+                                        <li class="shopper" data-id="70">El Fideo</li>
+                                        <li class="shopper" data-id="195">Trumbón </li>
+                                        <li class="shopper" data-id="85">La maruja</li>
+                                        <li class="shopper" data-id="82">MacTias</li>
+                                        <li class="shopper" data-id="31">"El jinete nocturno"</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_3 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-3" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-3">
+                                        <h5 class="race__title">Carrera 3</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="71">Jhon "Otis" Sanchez</li>
+                                        <li class="shopper" data-id="111">Xavi Potons</li>
+                                        <li class="shopper" data-id="126">Pastiche Trejo</li>
+                                        <li class="shopper" data-id="102">Cafeole</li>
+                                        <li class="shopper" data-id="211">Bubbles</li>
+                                        <li class="shopper" data-id="49">Noah "Bateador"</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_4 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-4" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-4">
+                                        <h5 class="race__title">Carrera 4</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="254">Maruja karen</li>
+                                        <li class="shopper" data-id="122">Chin Na</li>
+                                        <li class="shopper" data-id="19">Pier no doy ni una</li>
+                                        <li class="shopper" data-id="91">Uberto mascachapas</li>
+                                        <li class="shopper" data-id="142">Barbari Darl</li>
+                                        <li class="shopper" data-id="10">Niki 'The King Rat'</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_5 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-5" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-5">
+                                        <h5 class="race__title">Carrera 5</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="228">La Vaga Garrapata</li>
+                                        <li class="shopper" data-id="279">Harpo</li>
+                                        <li class="shopper" data-id="16">Ancho Cena</li>
+                                        <li class="shopper" data-id="138">Fitipaldo Ferraro</li>
+                                        <li class="shopper" data-id="223">Tomás Turbato</li>
+                                        <li class="shopper" data-id="167">Psychobilly el niño</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_6 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-6" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-6">
+                                        <h5 class="race__title">Carrera 6</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="284">Lily "Abuelita" Bowen</li>
+                                        <li class="shopper" data-id="290">Polín, el guerrero rodante</li>
+                                        <li class="shopper" data-id="13">Long Long Alex</li>
+                                        <li class="shopper" data-id="38">Jhonny culoduro</li>
+                                        <li class="shopper" data-id="213">Rickenbacker</li>
+                                        <li class="shopper" data-id="61">4 Quesos</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_7 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-7" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-7">
+                                        <h5 class="race__title">Carrera 7</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="48">Matthew "Cola Rápida"</li>
+                                        <li class="shopper" data-id="11">G. Kaos</li>
+                                        <li class="shopper" data-id="277">Groucho</li>
+                                        <li class="shopper" data-id="289">Doc Hena</li>
+                                        <li class="shopper" data-id="32">Escorbrutus</li>
+                                        <li class="shopper" data-id="274">Elvis Strangelove</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_8 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-1-race-8" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-1-race-8">
+                                        <h5 class="race__title">Carrera 8</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="43">Peter Bilt 281</li>
+                                        <li class="shopper" data-id="275">Lady Iluminada</li>
+                                        <li class="shopper" data-id="7">Chumi 'El Barón Rojo'</li>
+                                        <li class="shopper" data-id="37">Favela Anderson</li>
+                                        <li class="shopper" data-id="5">William "Rueda loca"</li>
+                                    </ol>
+                                </li></ul>
+                            </li>
+                            <li class="group group_number_2 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-preliminary-round-group-2" type="checkbox">
+                                <label class="toggle__actuator" for="qualifying-round-preliminary-round-group-2">
+                                    <h4 class="group__title">Clasificatoria 2</h4>
+                                </label>
+                                <ul class="group__race-list toggle__target">
+                                <li class="race race_finished race_number_1 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-1" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-1">
+                                        <h5 class="race__title">Carrera 1</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="66">Frank "frenar-es-de-cobardes" Churchill</li>
+                                        <li class="shopper" data-id="266">Erectus Magnussen</li>
+                                        <li class="shopper" data-id="6">Blunt 'The Shunt'</li>
+                                        <li class="shopper" data-id="62">Carbonara</li>
+                                        <li class="shopper" data-id="40">Lilu Multipase</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_2 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-2" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-2">
+                                        <h5 class="race__title">Carrera 2</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="141">Scottex Johansson</li>
+                                        <li class="shopper" data-id="124">Guakamayo Hijo</li>
+                                        <li class="shopper" data-id="246">Lupan el Rufián</li>
+                                        <li class="shopper" data-id="88">Hammer Lin</li>
+                                        <li class="shopper" data-id="283">Butch DeLorian</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_3 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-3" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-3">
+                                        <h5 class="race__title">Carrera 3</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="269">Ron Miscabajo</li>
+                                        <li class="shopper" data-id="89">Pili pistones</li>
+                                        <li class="shopper" data-id="146">Estornino Callejero</li>
+                                        <li class="shopper" data-id="139">Luis Jamilton</li>
+                                        <li class="shopper" data-id="34">Ostiazo Bob</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_4 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-4" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-4">
+                                        <h5 class="race__title">Carrera 4</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="256">Lokomami</li>
+                                        <li class="shopper" data-id="163">Bad Max Speed</li>
+                                        <li class="shopper" data-id="175">Er Caraha</li>
+                                        <li class="shopper" data-id="230">Corredor 22</li>
+                                        <li class="shopper" data-id="113">Hiper Cart</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_5 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-5" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-5">
+                                        <h5 class="race__title">Carrera 5</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="189">La Rápida del Oeste</li>
+                                        <li class="shopper" data-id="80">MacArra</li>
+                                        <li class="shopper" data-id="224">Max Schmeling</li>
+                                        <li class="shopper" data-id="120">Chin Agua</li>
+                                        <li class="shopper" data-id="192">MaraLu y su mercedes</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_6 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-6" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-6">
+                                        <h5 class="race__title">Carrera 6</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="242">Mudlover (mi vecino del primero derecha)</li>
+                                        <li class="shopper" data-id="18">domino torito</li>
+                                        <li class="shopper" data-id="12">Isra Puto Crack</li>
+                                        <li class="shopper" data-id="249">KH-69</li>
+                                        <li class="shopper" data-id="221">Speed y González</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_7 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-7" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-7">
+                                        <h5 class="race__title">Carrera 7</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="196">Calambres</li>
+                                        <li class="shopper" data-id="281">Gummo</li>
+                                        <li class="shopper" data-id="73">Peter pan el tercero</li>
+                                        <li class="shopper" data-id="218">Pierre Doyalguna</li>
+                                        <li class="shopper" data-id="46">Camila "Ruedas de fuego"</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_8 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-2-race-8" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-2-race-8">
+                                        <h5 class="race__title">Carrera 8</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="110">Dani Tordo</li>
+                                        <li class="shopper" data-id="69">Lali</li>
+                                        <li class="shopper" data-id="103">Cruasan</li>
+                                        <li class="shopper" data-id="41">El Coleccionista</li>
+                                        <li class="shopper" data-id="133">Madame Frufru</li>
+                                    </ol>
+                                </li></ul>
+                            </li>
+                            <li class="group group_number_3 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-preliminary-round-group-3" type="checkbox">
+                                <label class="toggle__actuator" for="qualifying-round-preliminary-round-group-3">
+                                    <h4 class="group__title">Clasificatoria 3</h4>
+                                </label>
+                                <ul class="group__race-list toggle__target">
+                                <li class="race race_finished race_number_1 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-1" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-1">
+                                        <h5 class="race__title">Carrera 1</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="194">Zaskia</li>
+                                        <li class="shopper" data-id="50">Sebas "Cubo de basura"</li>
+                                        <li class="shopper" data-id="131">Diego Gallu "El Fenómeno"</li>
+                                        <li class="shopper" data-id="72">María Eduarda "she Classic" Lopez</li>
+                                        <li class="shopper" data-id="65">Fakename Smith</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_2 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-2" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-2">
+                                        <h5 class="race__title">Carrera 2</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="140">El Bueno de Raemon</li>
+                                        <li class="shopper" data-id="255">Hojo keboy</li>
+                                        <li class="shopper" data-id="114">Metacartdona</li>
+                                        <li class="shopper" data-id="68">El Tola</li>
+                                        <li class="shopper" data-id="270">Q Ano Estrecho</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_3 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-3" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-3">
+                                        <h5 class="race__title">Carrera 3</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="264">Athal Troll</li>
+                                        <li class="shopper" data-id="179">Vlad Pitt</li>
+                                        <li class="shopper" data-id="125">Jefry Tresdientes</li>
+                                        <li class="shopper" data-id="248">MurdStang </li>
+                                        <li class="shopper" data-id="33">Jaime el flipao</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_4 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-4" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-4">
+                                        <h5 class="race__title">Carrera 4</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="14">Ro "la Botas"</li>
+                                        <li class="shopper" data-id="84">Jordi el empotrador</li>
+                                        <li class="shopper" data-id="121">Chin Luz</li>
+                                        <li class="shopper" data-id="63">Prosciutto</li>
+                                        <li class="shopper" data-id="286">Zunar "Gato Raro" Doric</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_5 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-5" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-5">
+                                        <h5 class="race__title">Carrera 5</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="130">Tortugo Patamala</li>
+                                        <li class="shopper" data-id="39">Kruger Van Diesel</li>
+                                        <li class="shopper" data-id="20">Ray oma Queen</li>
+                                        <li class="shopper" data-id="90">Trueno mckinky</li>
+                                        <li class="shopper" data-id="217">Fender Tremolo</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_6 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-6" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-6">
+                                        <h5 class="race__title">Carrera 6</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="168">Wez cara de Hez</li>
+                                        <li class="shopper" data-id="252">Federico Martinejo Subemontes</li>
+                                        <li class="shopper" data-id="109">Chus Putas</li>
+                                        <li class="shopper" data-id="262">Xop el Enlunao</li>
+                                        <li class="shopper" data-id="8">'El Profesor Próstata'</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_7 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-7" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-7">
+                                        <h5 class="race__title">Carrera 7</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="44">Sam Shun Fa</li>
+                                        <li class="shopper" data-id="104">Olala</li>
+                                        <li class="shopper" data-id="81">MacOpolo</li>
+                                        <li class="shopper" data-id="173">La Cuquigamba Veloz</li>
+                                        <li class="shopper" data-id="1">Anna DeVille</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_8 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-3-race-8" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-3-race-8">
+                                        <h5 class="race__title">Carrera 8</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="268">Darudesanstorm</li>
+                                        <li class="shopper" data-id="222">Dominic To'recto</li>
+                                        <li class="shopper" data-id="280">Zeppo</li>
+                                        <li class="shopper" data-id="287">Pollito Atómico</li>
+                                        <li class="shopper" data-id="245">Mongolongo Power</li>
+                                    </ol>
+                                </li></ul>
+                            </li>
+                            <li class="group group_number_4 toggle">
+                                <input class="toggle__trigger trigger" id="qualifying-round-preliminary-round-group-4" type="checkbox">
+                                <label class="toggle__actuator" for="qualifying-round-preliminary-round-group-4">
+                                    <h4 class="group__title">Clasificatoria 4</h4>
+                                </label>
+                                <ul class="group__race-list toggle__target">
+                                <li class="race race_finished race_number_1 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-1" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-1">
+                                        <h5 class="race__title">Carrera 1</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="241">Lo "Mascabalas" Real</li>
+                                        <li class="shopper" data-id="278">Chico</li>
+                                        <li class="shopper" data-id="240">Daigus Resinus UV</li>
+                                        <li class="shopper" data-id="239">Magento</li>
+                                        <li class="shopper" data-id="263">Abe Potapiens</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_2 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-2" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-2">
+                                        <h5 class="race__title">Carrera 2</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="243">Apestoso "Pit"</li>
+                                        <li class="shopper" data-id="273">Shenton el llano</li>
+                                        <li class="shopper" data-id="17">Bugaboo plus</li>
+                                        <li class="shopper" data-id="251">VaanHellsing</li>
+                                        <li class="shopper" data-id="36">El bocas</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_3 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-3" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-3">
+                                        <h5 class="race__title">Carrera 3</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="271">Asturix</li>
+                                        <li class="shopper" data-id="257">Aitor Lacena</li>
+                                        <li class="shopper" data-id="35">Samy nacido-2-veces</li>
+                                        <li class="shopper" data-id="112">Cart-E.4</li>
+                                        <li class="shopper" data-id="291">Pusky</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_4 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-4" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-4">
+                                        <h5 class="race__title">Carrera 4</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="226">Brook</li>
+                                        <li class="shopper" data-id="258">Wanchiflais el Forajido</li>
+                                        <li class="shopper" data-id="86">Pablosky "trespiños"</li>
+                                        <li class="shopper" data-id="166">El cortaúñas oxidado</li>
+                                        <li class="shopper" data-id="272">Alejandro M.</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_5 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-5" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-5">
+                                        <h5 class="race__title">Carrera 5</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="4">Pisahuevos</li>
+                                        <li class="shopper" data-id="132">Miki 'Iceman' Traggönen</li>
+                                        <li class="shopper" data-id="15">Yoli Crossing</li>
+                                        <li class="shopper" data-id="42">Gilhoe Veloz</li>
+                                        <li class="shopper" data-id="288">Pollo Jurásico</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_6 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-6" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-6">
+                                        <h5 class="race__title">Carrera 6</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="285">Sidorovich "El Come Pollos"</li>
+                                        <li class="shopper" data-id="193">Wheelie el niño</li>
+                                        <li class="shopper" data-id="197">Nadal Yguardarlaropa</li>
+                                        <li class="shopper" data-id="87">Josema Pache</li>
+                                        <li class="shopper" data-id="119">Correbot 3.14159</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_7 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-7" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-7">
+                                        <h5 class="race__title">Carrera 7</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="190">Vladman el Murciégalo</li>
+                                        <li class="shopper" data-id="174">El Poeta del Bloste</li>
+                                        <li class="shopper" data-id="201">Pepe apañacacharros</li>
+                                        <li class="shopper" data-id="108">Steven Sin Gas</li>
+                                        <li class="shopper" data-id="220">Apest-Oso</li>
+                                    </ol>
+                                </li>
+                                <li class="race race_finished race_number_8 toggle">
+                                    <input class="toggle__trigger trigger" id="qualifying-round-1-group-4-race-8" type="checkbox">
+                                    <label class="toggle__actuator" for="qualifying-round-1-group-4-race-8">
+                                        <h5 class="race__title">Carrera 8</h5>
+                                    </label>
+                                    <time class="race__date" datetime="2023-05-31 20:00">31/05/2023 20:00</time>
+                                    <ol class="race__shopper-list toggle__target">
+                                        <li class="shopper" data-id="159">Crudo</li>
+                                        <li class="shopper" data-id="47">Ethan "Ojoscuro"</li>
+                                        <li class="shopper" data-id="107">Bios "Bocachancla"</li>
+                                        <li class="shopper" data-id="212">Max Power</li>
+                                        <li class="shopper" data-id="276">Sora</li>
+                                    </ol>
+                                </li></ul>
+                            </li></ul></li>
+                </ol>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <a class="footer__link" href="https://www.badrollgames.com/"            target="Bad Roll Games">Bad Roll Games</a>
+        <a class="footer__link" href="https://www.patreon.com/punkapocalyptic"  target="Punkapocalyptic: The Patreon">Punkapocalyptic &#8211; The Patreon</a>
+    </footer>
+</body>
+</html>
